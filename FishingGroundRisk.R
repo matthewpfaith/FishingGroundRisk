@@ -15,7 +15,7 @@ library(viridis)
 library(scales)    
 
 #Setwd
-setwd("C:/Users/matthewfaith/OneDrive - University of Plymouth/PhD/Chapter 5 - Fishing effort for assessing fisheries climate risks/Data/")
+setwd()
 
 biomass_csv      <- "Prcntg_chng_FishBiomass_refperiod_1990-2000.csv"
 effort_csv       <- "Pelagic_NomFishing_201417_mean.csv"
@@ -106,7 +106,7 @@ crs(r_vuln) <- crs(template_raster)
 r_vuln <- resample(r_vuln, template_raster, method = "bilinear")
 r_vuln[is.na(r_vuln[])] <- 0
 
-#Missing Mask
+#Missing mask
 r_missing <- rasterFromXYZ(missing %>% dplyr::select(Lon, Lat, !!missing_valcol) %>% rename(value = !!missing_valcol))
 crs(r_missing) <- crs(template_raster)
 r_missing <- resample(r_missing, template_raster, method = "ngb")
@@ -278,4 +278,5 @@ plot(p_risk)
 #ggsave("Figure3a_Hazard_Final.png", p_hazard, width = 8, height = 5, dpi = 600)
 #ggsave("Figure3b_Exposure_Final.png", p_exposure, width = 8, height = 5, dpi = 600)
 #ggsave("Figure3c_Vulnerability_Final.png", p_vuln, width = 8, height = 5, dpi = 600)
+
 #ggsave("Figure3d_Risk_Final.png", p_risk, width = 8, height = 5, dpi = 600)

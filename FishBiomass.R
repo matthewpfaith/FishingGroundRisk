@@ -12,7 +12,7 @@ library(rnaturalearth)
 library(sp)
 
 #Set WD
-setwd("C:/Users/matthewfaith/OneDrive - University of Plymouth/PhD/Chapter 5 - Fishing effort for assessing fisheries climate risks/Data/")
+setwd()
 
 #Load ESM datasets
 CHLa_ssp585 <- read_csv("Input/chl_mgm3_ssp585_decadal.csv")
@@ -268,3 +268,4 @@ print(plot_fixed)
 #Save the plot to file
 #ggsave(filename = paste0("Map_", model_to_plot, "_", gsub("-", "", decade_to_plot), ".png"),
 #      plot = plot_fixed, width = 12, height = 7, dpi = 300)
+

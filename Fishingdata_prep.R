@@ -6,7 +6,7 @@ library(dplyr)
 library(tidyr)
 
 #Load data
-setwd("C:/Users/matthewfaith/OneDrive - University of Plymouth/PhD/Chapter 5 - Fishing effort for assessing fisheries climate risks/Data/")
+setwd()
 master_data <- read_csv("Input/GriddedEffortby_FGroup_FishingCountry_Sector.csv")
 
 #Data prep
@@ -62,3 +62,4 @@ Total_Global_Effort <- sum(All_effort_summary$All_Nom_201417_mean_effort)
 Total_Pelagic_Effort <- sum(Pelagic_effort_summary$Pelagic_Nom_201417_mean_effort)
 Percent_Pelagic <- (Total_Pelagic_Effort / Total_Global_Effort) * 100
 print(paste0("Global Pelagic Percentage: ", round(Percent_Pelagic, 2), "%"))
+

@@ -23,7 +23,7 @@ Phyto_Biomass_ssp126 <- read_csv("Input/phyc-vin2_gCm2_ssp126_decadal.csv")
 #Select SSP
 CHLa <- CHLa_ssp585
 Phyto_Biomass <- Phyto_Biomass_ssp585
-selected_ssp <- "ssp585"  # used to filter FishMIP file (case-insensitive)
+selected_ssp <- "ssp585" 
 
 #Ref period
 future_decades <- c("2040-2050","2050-2060","2060-2070","2070-2080","2080-2090","2090-2100")
@@ -268,4 +268,5 @@ print(plot_fixed)
 #Save the plot to file
 #ggsave(filename = paste0("Map_", model_to_plot, "_", gsub("-", "", decade_to_plot), ".png"),
 #      plot = plot_fixed, width = 12, height = 7, dpi = 300)
+
 
